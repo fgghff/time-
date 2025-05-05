@@ -2,36 +2,124 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>العد التنازلي لبداية الامتحانات</title>
+  <title>العد التنازلي لحلم الطب أو النفط</title>
   <style>
     body {
       font-family: 'Tahoma', sans-serif;
-      background: linear-gradient(to bottom right, #d4f1f9, #e1fbe4);
+      background: linear-gradient(to bottom right, #e0f7fa, #e8f5e9);
       text-align: center;
-      padding-top: 100px;
+      padding-top: 50px;
       direction: rtl;
+      color: #1b1b1b;
     }
+
+    h1 {
+      font-size: 2em;
+      color: #0d3c61;
+      margin-bottom: 30px;
+    }
+
     .countdown {
-      font-size: 2.5em;
-      color: #1c3c4e;
-      background-color: #ffffffcc;
+      font-size: 2.3em;
+      color: #14532d;
+      background-color: #ffffffee;
       display: inline-block;
-      padding: 30px 50px;
+      padding: 25px 40px;
       border-radius: 20px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
       transition: all 0.3s ease-in-out;
     }
-    h1 {
-      color: #14532d;
-      margin-bottom: 40px;
-      font-size: 2em;
+
+    .dreams {
+      font-size: 1.2em;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .duaa {
+      font-size: 1.1em;
+      font-style: italic;
+      color: #0f5132;
+      margin-top: 15px;
+    }
+
+    .icons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .icon-box {
+      width: 140px;
+      padding: 20px;
+      background-color: #ffffffdd;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .icon-box:hover {
+      transform: scale(1.05);
+    }
+
+    .icon-box svg {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 10px;
+      fill: #2c3e50;
+    }
+
+    .icon-label {
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    @media (max-width: 600px) {
+      .countdown {
+        font-size: 1.5em;
+        padding: 20px;
+      }
+      .icons {
+        flex-direction: column;
+        gap: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>العد التنازلي لبداية امتحانات السادس - 14 يونيو 2025 الساعة 7 صباحًا</h1>
-  <div class="countdown" id="countdown">
-    جارٍ الحساب...
+
+  <h1>العد التنازلي لبداية امتحانات السادس المصيرية</h1>
+  <div class="countdown" id="countdown">جارٍ الحساب...</div>
+
+  <div class="dreams">
+    حلمي الأول: <strong>القبول في كلية الطب العام</strong><br>
+    وإن لم يُكتب لي، فأتمنى أن يكون البديل <strong>معهد النفط</strong>
+  </div>
+
+  <div class="duaa">
+    اللهم ارزقني القبول في ما أتمنى، وسهّل لي طريقي، ووفقني لما فيه الخير والنجاح.
+  </div>
+
+  <div class="icons">
+    <div class="icon-box">
+      <!-- أيقونة الطب - السماعة -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M19 6a1 1 0 0 0-1 1v3a6 6 0 0 1-12 0V7a1 1 0 0 0-2 0v3a8 8 0 0 0 7 7.93V20H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2h-2v-2.07A8 8 0 0 0 20 10V7a1 1 0 0 0-1-1z"/>
+      </svg>
+      <div class="icon-label">الطب العام</div>
+    </div>
+
+    <div class="icon-box">
+      <!-- أيقونة النفط - برج نفط -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M13 2h-2v2H7v2h10V4h-4V2zm0 8.13V9h1V7H10v2h1v1.13A6.002 6.002 0 0 0 6 15h2a4 4 0 0 1 8 0h2a6.002 6.002 0 0 0-5-4.87zM4 17v2h16v-2H4z"/>
+      </svg>
+      <div class="icon-label">معهد النفط</div>
+    </div>
   </div>
 
   <script>
@@ -43,7 +131,7 @@
       const distance = targetDate - now;
 
       if (distance < 0) {
-        countdownEl.innerHTML = "بدأت امتحاناتك! الله يوفقك!";
+        countdownEl.innerHTML = "بدأت امتحاناتك! الله يحقق لك كل خير!";
         return;
       }
 
@@ -58,5 +146,6 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
+
 </body>
 </html>
