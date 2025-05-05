@@ -2,32 +2,34 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>عداد تنازلي إلى 14 يونيو</title>
+  <title>العد التنازلي لبداية الامتحانات</title>
   <style>
     body {
       font-family: 'Tahoma', sans-serif;
-      background-color: #f0f4f8;
+      background: linear-gradient(to bottom right, #d4f1f9, #e1fbe4);
       text-align: center;
       padding-top: 100px;
       direction: rtl;
     }
     .countdown {
-      font-size: 2em;
-      color: #333;
-      background-color: #fff;
+      font-size: 2.5em;
+      color: #1c3c4e;
+      background-color: #ffffffcc;
       display: inline-block;
-      padding: 20px 40px;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      padding: 30px 50px;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: all 0.3s ease-in-out;
     }
     h1 {
-      color: #2c3e50;
+      color: #14532d;
       margin-bottom: 40px;
+      font-size: 2em;
     }
   </style>
 </head>
 <body>
-  <h1>العد التنازلي إلى 14 يونيو 2025 - الساعة 7 صباحًا</h1>
+  <h1>العد التنازلي لبداية امتحانات السادس - 14 يونيو 2025 الساعة 7 صباحًا</h1>
   <div class="countdown" id="countdown">
     جارٍ الحساب...
   </div>
@@ -41,7 +43,7 @@
       const distance = targetDate - now;
 
       if (distance < 0) {
-        countdownEl.innerHTML = "انتهى الوقت!";
+        countdownEl.innerHTML = "بدأت امتحاناتك! الله يوفقك!";
         return;
       }
 
