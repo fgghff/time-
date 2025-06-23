@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>العد التنازلي لحلم الطب أو النفط</title>
+  <title>العد التنازلي لنهاية امتحانات السادس</title>
   <style>
     body {
       font-family: 'Tahoma', sans-serif;
@@ -91,7 +91,7 @@
 </head>
 <body>
 
-  <h1>العد التنازلي لبداية امتحانات السادس المصيرية</h1>
+  <h1>العد التنازلي لنهاية امتحانات السادس المصيرية</h1>
   <div class="countdown" id="countdown">جارٍ الحساب...</div>
 
   <div class="dreams">
@@ -105,14 +105,12 @@
 
   <div class="icons">
     <div class="icon-box">
-      <!-- أيقونة الطب العام (صورة) -->
       <img src="https://images.vexels.com/media/users/3/151981/isolated/preview/f8863741dba8034b3e1d4809a01c782a-stethoscope-icon-medical-icons.png?width=380" 
            alt="الطب العام">
       <div class="icon-label">الطب العام</div>
     </div>
 
     <div class="icon-box">
-      <!-- أيقونة معهد النفط (صورة SVG من Lordicon) -->
       <img src="https://media.lordicon.com/icons/wired/outline/2114-oil-pump.svg" 
            alt="معهد النفط">
       <div class="icon-label">معهد النفط</div>
@@ -121,23 +119,36 @@
 
   <script>
     const countdownEl = document.getElementById('countdown');
-    const targetDate = new Date("June 14, 2025 07:00:00").getTime();
+
+    const exams = [
+      { name: "الرياضيات", date: new Date("2025-06-25T07:00:00") },
+      { name: "الكيمياء", date: new Date("2025-06-28T07:00:00") },
+      { name: "الفيزياء", date: new Date("2025-07-01T07:00:00") }
+    ];
+
+    function getNextExam() {
+      const now = new Date();
+      return exams.find(exam => exam.date > now);
+    }
 
     function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+      const now = new Date();
+      const lastExamDate = exams[exams.length - 1].date;
 
-      if (distance < 0) {
-        countdownEl.innerHTML = "بدأت امتحاناتك! الله يحقق لك كل خير!";
+      if (now > lastExamDate) {
+        countdownEl.innerHTML = `🎉 انتهت امتحانات السادس. ننتظر النتائج بفارغ الصبر.<br><br>🌿 اللهم اجعلها نهاية تعب وبداية فرج، وبشرنا بما يسر قلوبنا ويحقق أحلامنا.`;
         return;
       }
+
+      const nextExam = getNextExam();
+      const distance = nextExam.date.getTime() - now.getTime();
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdownEl.innerHTML = `${days} يوم - ${hours} ساعة - ${minutes} دقيقة - ${seconds} ثانية`;
+      countdownEl.innerHTML = `باقي على امتحان <strong>${nextExam.name}</strong>: ${days} يوم - ${hours} ساعة - ${minutes} دقيقة - ${seconds} ثانية`;
     }
 
     setInterval(updateCountdown, 1000);
