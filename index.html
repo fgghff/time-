@@ -1,159 +1,136 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>العد التنازلي لنهاية امتحانات السادس</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تقرير تنظيم الحاسوب - الأمن السيبراني</title>
+<style>
     body {
-      font-family: 'Tahoma', sans-serif;
-      background: linear-gradient(to bottom right, #e0f7fa, #e8f5e9);
-      text-align: center;
-      padding-top: 50px;
-      direction: rtl;
-      color: #1b1b1b;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f6f8;
+        color: #1f2937;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
     }
-
-    h1 {
-      font-size: 2em;
-      color: #0d3c61;
-      margin-bottom: 30px;
+    header {
+        background-color: #0f172a;
+        color: #f8fafc;
+        padding: 30px 20px;
+        text-align: center;
     }
-
-    .countdown {
-      font-size: 2.3em;
-      color: #14532d;
-      background-color: #ffffffee;
-      display: inline-block;
-      padding: 25px 40px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 25px;
+    header h1 {
+        margin: 0;
+        font-size: 28px;
     }
-
-    .dreams {
-      font-size: 1.2em;
-      margin-top: 25px;
-      margin-bottom: 10px;
-      color: #333;
+    header h2 {
+        margin: 5px 0 0 0;
+        font-size: 18px;
+        font-weight: normal;
+        color: #cbd5e1;
     }
-
-    .duaa {
-      font-size: 1.1em;
-      font-style: italic;
-      color: #0f5132;
-      margin-top: 15px;
+    section {
+        padding: 20px 40px;
+        max-width: 900px;
+        margin: auto;
+        background-color: #ffffff;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-
-    .icons {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      flex-wrap: wrap;
+    h3 {
+        color: #0f172a;
+        border-bottom: 2px solid #3b82f6;
+        padding-bottom: 5px;
     }
-
-    .icon-box {
-      width: 140px;
-      padding: 20px;
-      background-color: #ffffffdd;
-      border-radius: 15px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+    img {
+        display: block;
+        max-width: 80%;
+        margin: 15px auto;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
-
-    .icon-box:hover {
-      transform: scale(1.05);
-    }
-
-    .icon-box img,
-    .icon-box svg {
-      width: 64px;
-      height: 64px;
-      margin-bottom: 10px;
-    }
-
-    .icon-label {
-      font-weight: bold;
-      color: #2e7d32;
-    }
-
-    @media (max-width: 600px) {
-      .countdown {
-        font-size: 1.5em;
+    .footer {
+        text-align: center;
         padding: 20px;
-      }
-      .icons {
-        flex-direction: column;
-        gap: 20px;
-      }
+        color: #475569;
+        font-size: 14px;
     }
-  </style>
+</style>
 </head>
 <body>
 
-  <h1>العد التنازلي لنهاية امتحانات السادس المصيرية</h1>
-  <div class="countdown" id="countdown">جارٍ الحساب...</div>
+<header>
+    <h1>تقرير مادة تنظيم الحاسوب</h1>
+    <h2>جامعة تكريت - كلية علوم الحاسوب - قسم الأمن السيبراني - المرحلة الأولى</h2>
+    <h2>اسم الطالب: عبدالله احمد مطلك</h2>
+</header>
 
-  <div class="dreams">
-    حلمي الأول: <strong>القبول في كلية الطب العام</strong><br>
-    وإن لم يُكتب لي، فأتمنى أن يكون البديل <strong>معهد النفط</strong>
-  </div>
+<section>
+    <h3>المقدمة</h3>
+    <p>
+        تُعد مادة تنظيم الحاسوب من المواد الأساسية في تخصص الأمن السيبراني، إذ تُسهم في فهم البنية الداخلية للحاسوب وآلية عمل مكوناته المادية. 
+        ويُعتبر تنظيم الذاكرة من أهم الجوانب التي تؤثر بشكل مباشر على أداء النظام وأمنه. 
+        يهدف هذا التقرير إلى توضيح مفهوم تنظيم الذاكرة وبيان أثره على أمن النظام من منظور الأمن السيبراني.
+    </p>
+</section>
 
-  <div class="duaa">
-    اللهم ارزقني القبول في ما أتمنى، وسهّل لي طريقي، ووفقني لما فيه الخير والنجاح.
-  </div>
+<section>
+    <h3>تنظيم الذاكرة في الحاسوب</h3>
+    <p>
+        تنظيم الذاكرة هو الأسلوب الذي يتم من خلاله ترتيب وإدارة الذاكرة داخل الحاسوب، سواء كانت الذاكرة الرئيسية (RAM) أو الذاكرة الثانوية. 
+        ويشمل ذلك آلية تقسيم الذاكرة، وأساليب العنونة، وتنظيم عمليات القراءة والكتابة، بما يضمن كفاءة استخدام الموارد ومنع التداخل بين البرامج المختلفة.
+    </p>
+    <img src="https://via.placeholder.com/600x250?text=RAM+and+Cache+Diagram" alt="Diagram of RAM and Cache">
+</section>
 
-  <div class="icons">
-    <div class="icon-box">
-      <img src="https://images.vexels.com/media/users/3/151981/isolated/preview/f8863741dba8034b3e1d4809a01c782a-stethoscope-icon-medical-icons.png?width=380" 
-           alt="الطب العام">
-      <div class="icon-label">الطب العام</div>
-    </div>
+<section>
+    <h3>أثر تنظيم الذاكرة على أمن النظام</h3>
+    <p>
+        يؤثر تنظيم الذاكرة بشكل مباشر على أمن النظام، حيث أن سوء إدارة الذاكرة قد يؤدي إلى ظهور ثغرات أمنية خطيرة. 
+        من أبرز هذه الثغرات إمكانية الوصول غير المصرح به إلى البيانات أو تنفيذ تعليمات خبيثة داخل النظام، مما قد يؤدي إلى اختراق النظام أو تعطيله.
+    </p>
+</section>
 
-    <div class="icon-box">
-      <img src="https://media.lordicon.com/icons/wired/outline/2114-oil-pump.svg" 
-           alt="معهد النفط">
-      <div class="icon-label">معهد النفط</div>
-    </div>
-  </div>
+<section>
+    <h3>المخاطر والثغرات المرتبطة بالذاكرة</h3>
+    <p>
+        من أهم المخاطر الأمنية المرتبطة بتنظيم الذاكرة:
+        <ul>
+            <li>هجمات <b>تجاوز سعة الذاكرة (Buffer Overflow)</b></li>
+            <li>استغلال الذاكرة من نوع <b>Stack وHeap</b></li>
+            <li>هجمات القنوات الجانبية المرتبطة بالذاكرة المؤقتة <b>Cache</b></li>
+        </ul>
+    </p>
+    <img src="https://via.placeholder.com/600x250?text=Buffer+Overflow+Illustration" alt="Buffer Overflow Illustration">
+</section>
 
-  <script>
-    const countdownEl = document.getElementById('countdown');
+<section>
+    <h3>آليات الحماية الحديثة</h3>
+    <p>
+        تعتمد الأنظمة الحديثة على مجموعة من التقنيات لحماية الذاكرة وتعزيز أمن النظام، من أهمها:
+        <ul>
+            <li><b>Memory Protection</b></li>
+            <li><b>Address Space Layout Randomization (ASLR)</b></li>
+            <li><b>Data Execution Prevention (DEP)</b></li>
+        </ul>
+        تساعد هذه التقنيات في تقليل فرص استغلال الثغرات الأمنية ومنع تنفيذ الشيفرات الخبيثة داخل الذاكرة.
+    </p>
+    <img src="https://via.placeholder.com/600x250?text=Memory+Protection+Diagram" alt="Memory Protection Illustration">
+</section>
 
-    const exams = [
-      { name: "الرياضيات", date: new Date("2025-06-25T07:00:00") },
-      { name: "الكيمياء", date: new Date("2025-06-28T07:00:00") },
-      { name: "الفيزياء", date: new Date("2025-07-01T07:00:00") }
-    ];
+<section>
+    <h3>الخاتمة</h3>
+    <p>
+        في الختام، يتضح أن تنظيم الذاكرة يُعد عنصرًا أساسيًا في بناء أنظمة حاسوبية آمنة. 
+        كما أن فهم هذا الموضوع يُمكّن طلبة الأمن السيبراني من استيعاب طبيعة الثغرات الأمنية المرتبطة بالذاكرة وكيفية الحد منها، 
+        مما يسهم في تطوير أنظمة أكثر كفاءة وأمانًا.
+    </p>
+</section>
 
-    function getNextExam() {
-      const now = new Date();
-      return exams.find(exam => exam.date > now);
-    }
-
-    function updateCountdown() {
-      const now = new Date();
-      const lastExamDate = exams[exams.length - 1].date;
-
-      if (now > lastExamDate) {
-        countdownEl.innerHTML = `🎉 انتهت امتحانات السادس. ننتظر النتائج بفارغ الصبر.<br><br>🌿 اللهم اجعلها نهاية تعب وبداية فرج، وبشرنا بما يسر قلوبنا ويحقق أحلامنا.`;
-        return;
-      }
-
-      const nextExam = getNextExam();
-      const distance = nextExam.date.getTime() - now.getTime();
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownEl.innerHTML = `باقي على امتحان <strong>${nextExam.name}</strong>: ${days} يوم - ${hours} ساعة - ${minutes} دقيقة - ${seconds} ثانية`;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+<div class="footer">
+    حقوق الطبع والنشر © 2026 عبدالله احمد مطلك
+</div>
 
 </body>
 </html>
