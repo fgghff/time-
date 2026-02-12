@@ -2,111 +2,187 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>واجب Snort - مراقبة الشبكة</title>
+<title>مشروع الهياكل المتقطعة</title>
 <style>
 body{
     font-family: Arial, sans-serif;
     background:#f3f4f6;
-    color:#1f2937;
     margin:0;
-    padding:0;
-    line-height:1.7;
+    line-height:1.9;
+    color:#111827;
 }
-header{
-    background:#0f172a;
-    color:#f8fafc;
+.page{
+    width:900px;
+    margin:30px auto;
+    background:white;
+    padding:60px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+h1,h2,h3{
     text-align:center;
-    padding:25px;
 }
-header h1{margin:0;font-size:28px;}
-section{
-    background:#ffffff;
-    margin:20px auto;
-    padding:25px 35px;
-    max-width:850px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+h2{
+    border-bottom:2px solid #2563eb;
+    padding-bottom:10px;
 }
-h3{
-    color:#0f172a;
-    border-bottom:2px solid #3b82f6;
-    padding-bottom:5px;
-    margin-bottom:10px;
+.section{
+    margin-top:40px;
 }
-img{
-    display:block;
-    max-width:100%;
-    margin:10px auto;
-    border:1px solid #ccc;
-    border-radius:5px;
-}
-code{
-    background:#f1f5f9;
-    padding:2px 5px;
-    border-radius:3px;
+.page-break{
+    page-break-after:always;
 }
 </style>
 </head>
+
 <body>
 
-<header>
-<h1>واجب Snort - مراقبة الشبكة وإعطاء Alert</h1>
-<h3>جامعة تكريت - كلية علوم الحاسوب والرياضيات - قسم الأمن السيبراني</h3>
-<h3>الطالب: عبدالله احمد مطلك</h3>
-</header>
+<!-- الصفحة الأولى -->
+<div class="page">
+    <h1>مشروع مادة الهياكل المتقطعة</h1>
+    <br><br>
+    <h2>اسم الطالب: عبدالله احمد مطلك</h2>
+    <h2>الشعبة: B</h2>
+    <h2>الدراسة: الصباحية</h2>
+</div>
 
-<section>
-<h3>1. التأكد من تثبيت Snort</h3>
-<p>
-افتح Terminal واكتب:
-</p>
-<code>snort -V</code>
-<p>إذا ظهر الإصدار، Snort مثبت ✔️</p>
-<img src="screenshot_snort_version.png" alt="Snort Version Screenshot">
-</section>
+<div class="page-break"></div>
 
-<section>
-<h3>2. معرفة كرت الشبكة</h3>
-<p>
-لتحديد واجهة الشبكة النشطة:
-</p>
-<code>ip a</code>
-<img src="screenshot_ip_a.png" alt="Network Interface Screenshot">
-</section>
+<!-- الصفحة الثانية -->
+<div class="page">
+    <h2>المقدمة</h2>
+    <div class="section">
+        <p>
+        تُعد الهياكل المتقطعة (Discrete Structures) من المواد الأساسية في تخصصات علوم الحاسوب
+        والأمن السيبراني، حيث تهتم بدراسة الأنظمة الرياضية التي تعتمد على القيم المنفصلة
+        وليس المستمرة. وتشمل هذه المادة موضوعات مثل المنطق الرياضي، نظرية المجموعات،
+        العلاقات، الدوال، التوافيق، الرسوم البيانية، ونظرية الأعداد.
+        </p>
+    </div>
+</div>
 
-<section>
-<h3>3. إنشاء Rule لإظهار Alert</h3>
-<p>
-افتح ملف القواعد:
-</p>
-<code>sudo nano /etc/snort/rules/local.rules</code>
-<p>أضف السطر التالي لاكتشاف Ping (ICMP):</p>
-<code>alert icmp any any -> any any (msg:"ICMP Ping Detected"; sid:1000001; rev:1;)</code>
-<img src="screenshot_rule.png" alt="Snort Rule Screenshot">
-</section>
+<div class="page-break"></div>
 
-<section>
-<h3>4. تشغيل Snort</h3>
-<p>
-نفذ الأمر التالي لمراقبة الشبكة وعرض التنبيهات على التيرمنال:
-</p>
-<code>sudo snort -i eth0 -c /etc/snort/snort.conf -A console</code>
-<img src="screenshot_snort_running.png" alt="Snort Running Screenshot">
-</section>
+<!-- الصفحة الثالثة -->
+<div class="page">
+    <h2>المنطق الرياضي</h2>
+    <div class="section">
+        <p>
+        المنطق الرياضي هو الأساس الذي تُبنى عليه البرمجة والخوارزميات.
+        يتضمن دراسة العبارات المنطقية، أدوات الربط مثل AND و OR و NOT،
+        والجداول المنطقية (Truth Tables).
+        </p>
+        <p>
+        يُستخدم المنطق في تصميم الدوائر الرقمية وفي تحليل صحة العبارات البرمجية.
+        </p>
+    </div>
+</div>
 
-<section>
-<h3>5. اختبار Alert</h3>
-<p>
-من جهاز آخر أو نفس الجهاز:
-</p>
-<code>ping 8.8.8.8</code>
-<p>ستظهر رسالة Alert في التيرمنال مثل:</p>
-<code>[**] [1:1000001:1] ICMP Ping Detected [**]</code>
-<img src="screenshot_alert.png" alt="Snort Alert Screenshot">
-</section>
+<div class="page-break"></div>
 
-<section>
+<!-- الصفحة الرابعة -->
+<div class="page">
+    <h2>نظرية المجموعات</h2>
+    <div class="section">
+        <p>
+        تدرس نظرية المجموعات كيفية التعامل مع عناصر مجمعة ضمن كيان واحد.
+        من العمليات الأساسية: الاتحاد، التقاطع، الفرق، والمتممة.
+        </p>
+        <p>
+        تُستخدم المجموعات في قواعد البيانات وأنظمة التشفير.
+        </p>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- الصفحة الخامسة -->
+<div class="page">
+    <h2>العلاقات والدوال</h2>
+    <div class="section">
+        <p>
+        العلاقة هي مجموعة من الأزواج المرتبة، بينما الدالة هي علاقة خاصة
+        تربط كل عنصر من المجال بعنصر واحد فقط من المدى.
+        </p>
+        <p>
+        تُستخدم الدوال في تحليل الخوارزميات والنماذج الرياضية.
+        </p>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- الصفحة السادسة -->
+<div class="page">
+    <h2>التوافيق والتباديل</h2>
+    <div class="section">
+        <p>
+        يهتم هذا الجزء بحساب عدد الطرق الممكنة لترتيب أو اختيار عناصر معينة.
+        التباديل تهتم بالترتيب، بينما التوافيق لا تهتم بالترتيب.
+        </p>
+        <p>
+        تُستخدم في تحليل الاحتمالات وفي التشفير.
+        </p>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- الصفحة السابعة -->
+<div class="page">
+    <h2>الرسوم البيانية Graph Theory</h2>
+    <div class="section">
+        <p>
+        الرسم البياني يتكون من عقد (Vertices) وحواف (Edges).
+        يُستخدم في تمثيل الشبكات الاجتماعية، شبكات الحاسوب،
+        وتحليل المسارات.
+        </p>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- الصفحة الثامنة -->
+<div class="page">
+    <h2>نظرية الأعداد</h2>
+    <div class="section">
+        <p>
+        تُعد نظرية الأعداد من أهم فروع الهياكل المتقطعة،
+        خاصة في تطبيقات التشفير مثل RSA،
+        حيث تعتمد على الأعداد الأولية.
+        </p>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- الصفحة التاسعة -->
+<div class="page">
+    <h2>تطبيقات الهياكل المتقطعة في الأمن السيبراني</h2>
+    <div class="section">
+        <p>
+        تعتمد أنظمة التشفير على نظرية الأعداد،
+        كما تُستخدم الرسوم البيانية في تحليل الشبكات،
+        ويُستخدم المنطق الرياضي في تصميم الخوارزميات الآمنة.
+        </p>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- الصفحة العاشرة -->
+<div class="page">
+    <h2>الخاتمة</h2>
+    <div class="section">
+        <p>
+        تُعد الهياكل المتقطعة حجر الأساس في بناء أنظمة الحاسوب الحديثة.
+        وفهمها يساعد الطالب على تطوير مهارات التحليل المنطقي
+        وتصميم الحلول الرياضية للمشكلات التقنية.
+        </p>
+    </div>
+</div>
+
+</body>
+    </html><section>
 <h3>الخاتمة</h3>
 <p>
 تمت مراقبة الشبكة باستخدام Snort وإظهار تنبيه عند حدوث ICMP Ping.  
