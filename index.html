@@ -2,193 +2,159 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>مشروع الهياكل المتقطعة</title>
+<title>رسالة إلى رانيا</title>
+
 <style>
+*{box-sizing:border-box;margin:0;padding:0;}
+
 body{
-    font-family: Arial, sans-serif;
-    background:#f3f4f6;
-    margin:0;
-    line-height:1.9;
-    color:#111827;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+font-family:tahoma,arial;
+color:white;
+overflow:hidden;
+background:linear-gradient(135deg,#ff9fbe,#ffc9dc,#ffe6f1);
 }
-.page{
-    width:900px;
-    margin:30px auto;
-    background:white;
-    padding:60px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+/* الصندوق */
+.container{
+background:rgba(255,255,255,0.25);
+backdrop-filter:blur(15px);
+padding:50px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+width:90%;
+max-width:700px;
+position:relative;
+z-index:2;
 }
-h1,h2,h3{
-    text-align:center;
+
+/* الصورة */
+.profile{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid white;
+box-shadow:0 0 20px rgba(0,0,0,0.35);
+margin-bottom:20px;
 }
-h2{
-    border-bottom:2px solid #2563eb;
-    padding-bottom:10px;
+
+h1{font-size:34px;margin:15px 0;}
+
+p{
+font-size:19px;
+line-height:1.8;
 }
-.section{
-    margin-top:40px;
+
+/* الزر */
+button{
+margin-top:25px;
+padding:14px 35px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff3b7f;
+cursor:pointer;
+transition:0.3s;
 }
-.page-break{
-    page-break-after:always;
+
+button:hover{
+transform:scale(1.08);
+background:#ffe3ef;
 }
+
+/* القلوب الهادئة */
+.heart{
+position:fixed;
+bottom:-40px;
+font-size:20px;
+animation:floatUp linear forwards;
+opacity:0.7;
+pointer-events:none;
+}
+
+@keyframes floatUp{
+0%{transform:translateY(0);opacity:0.7;}
+100%{transform:translateY(-110vh);opacity:0;}
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- الصفحة الأولى -->
-<div class="page">
-    <h1>مشروع مادة الهياكل المتقطعة</h1>
-    <br><br>
-    <h2>اسم الطالب: عبدالله احمد مطلك</h2>
-    <h2>الشعبة: B</h2>
-    <h2>الدراسة: الصباحية</h2>
-</div>
+<div class="container">
 
-<div class="page-break"></div>
+<img class="profile" src="https://a.top4top.io/p_3723fzcei0.jpg">
 
-<!-- الصفحة الثانية -->
-<div class="page">
-    <h2>المقدمة</h2>
-    <div class="section">
-        <p>
-        تُعد الهياكل المتقطعة (Discrete Structures) من المواد الأساسية في تخصصات علوم الحاسوب
-        والأمن السيبراني، حيث تهتم بدراسة الأنظمة الرياضية التي تعتمد على القيم المنفصلة
-        وليس المستمرة. وتشمل هذه المادة موضوعات مثل المنطق الرياضي، نظرية المجموعات،
-        العلاقات، الدوال، التوافيق، الرسوم البيانية، ونظرية الأعداد.
-        </p>
-    </div>
-</div>
+<h1>رانيا 🤍</h1>
 
-<div class="page-break"></div>
-
-<!-- الصفحة الثالثة -->
-<div class="page">
-    <h2>المنطق الرياضي</h2>
-    <div class="section">
-        <p>
-        المنطق الرياضي هو الأساس الذي تُبنى عليه البرمجة والخوارزميات.
-        يتضمن دراسة العبارات المنطقية، أدوات الربط مثل AND و OR و NOT،
-        والجداول المنطقية (Truth Tables).
-        </p>
-        <p>
-        يُستخدم المنطق في تصميم الدوائر الرقمية وفي تحليل صحة العبارات البرمجية.
-        </p>
-    </div>
-</div>
-
-<div class="page-break"></div>
-
-<!-- الصفحة الرابعة -->
-<div class="page">
-    <h2>نظرية المجموعات</h2>
-    <div class="section">
-        <p>
-        تدرس نظرية المجموعات كيفية التعامل مع عناصر مجمعة ضمن كيان واحد.
-        من العمليات الأساسية: الاتحاد، التقاطع، الفرق، والمتممة.
-        </p>
-        <p>
-        تُستخدم المجموعات في قواعد البيانات وأنظمة التشفير.
-        </p>
-    </div>
-</div>
-
-<div class="page-break"></div>
-
-<!-- الصفحة الخامسة -->
-<div class="page">
-    <h2>العلاقات والدوال</h2>
-    <div class="section">
-        <p>
-        العلاقة هي مجموعة من الأزواج المرتبة، بينما الدالة هي علاقة خاصة
-        تربط كل عنصر من المجال بعنصر واحد فقط من المدى.
-        </p>
-        <p>
-        تُستخدم الدوال في تحليل الخوارزميات والنماذج الرياضية.
-        </p>
-    </div>
-</div>
-
-<div class="page-break"></div>
-
-<!-- الصفحة السادسة -->
-<div class="page">
-    <h2>التوافيق والتباديل</h2>
-    <div class="section">
-        <p>
-        يهتم هذا الجزء بحساب عدد الطرق الممكنة لترتيب أو اختيار عناصر معينة.
-        التباديل تهتم بالترتيب، بينما التوافيق لا تهتم بالترتيب.
-        </p>
-        <p>
-        تُستخدم في تحليل الاحتمالات وفي التشفير.
-        </p>
-    </div>
-</div>
-
-<div class="page-break"></div>
-
-<!-- الصفحة السابعة -->
-<div class="page">
-    <h2>الرسوم البيانية Graph Theory</h2>
-    <div class="section">
-        <p>
-        الرسم البياني يتكون من عقد (Vertices) وحواف (Edges).
-        يُستخدم في تمثيل الشبكات الاجتماعية، شبكات الحاسوب،
-        وتحليل المسارات.
-        </p>
-    </div>
-</div>
-
-<div class="page-break"></div>
-
-<!-- الصفحة الثامنة -->
-<div class="page">
-    <h2>نظرية الأعداد</h2>
-    <div class="section">
-        <p>
-        تُعد نظرية الأعداد من أهم فروع الهياكل المتقطعة،
-        خاصة في تطبيقات التشفير مثل RSA،
-        حيث تعتمد على الأعداد الأولية.
-        </p>
-    </div>
-</div>
-
-<div class="page-break"></div>
-
-<!-- الصفحة التاسعة -->
-<div class="page">
-    <h2>تطبيقات الهياكل المتقطعة في الأمن السيبراني</h2>
-    <div class="section">
-        <p>
-        تعتمد أنظمة التشفير على نظرية الأعداد،
-        كما تُستخدم الرسوم البيانية في تحليل الشبكات،
-        ويُستخدم المنطق الرياضي في تصميم الخوارزميات الآمنة.
-        </p>
-    </div>
-</div>
-
-<div class="page-break"></div>
-
-<!-- الصفحة العاشرة -->
-<div class="page">
-    <h2>الخاتمة</h2>
-    <div class="section">
-        <p>
-        تُعد الهياكل المتقطعة حجر الأساس في بناء أنظمة الحاسوب الحديثة.
-        وفهمها يساعد الطالب على تطوير مهارات التحليل المنطقي
-        وتصميم الحلول الرياضية للمشكلات التقنية.
-        </p>
-    </div>
-</div>
-
-</body>
-    </html><section>
-<h3>الخاتمة</h3>
 <p>
-تمت مراقبة الشبكة باستخدام Snort وإظهار تنبيه عند حدوث ICMP Ping.  
-هذا يوضح قدرة Snort على العمل كـ IDS لمراقبة الشبكات واكتشاف الأنشطة المشبوهة.
+اعرف انك ربما متضايقة الآن<br>
+ولا اعرف ما الذي حدث<br><br>
+
+لكن اردت فقط ان اقول لك شيئاً بسيطاً<br>
+وجودك في حياتي شيء جميل جداً<br>
+وابتسامتك تعني لي الكثير<br><br>
+
+اتمنى ان تزول هذه الضيقة من قلبك<br>
+لان قلبك يستحق الفرح دائماً
 </p>
-</section>
+
+<p style="margin-top:15px;">
+ابتسمي قليلاً…<br>
+الدنيا تصبح اجمل عندما تبتسمين 🌸
+</p>
+
+<p style="margin-top:15px;">
+من عبدالله ❤️
+</p>
+
+<button onclick="showMessage()">اضغطي هنا</button>
+
+<p id="extra" style="margin-top:25px;font-size:20px;"></p>
+
+<audio id="music" loop>
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/fb/e4/d2/fbe4d2ed-5357-9855-5898-1fad176a62bf/mzaf_11791228578074490528.plus.aac.p.m4a" type="audio/mp4">
+</audio>
+
+</div>
+
+<script>
+
+/* القلوب */
+function createHeart(){
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(6+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+}
+
+setInterval(createHeart,800);
+
+/* عند الضغط */
+function showMessage(){
+
+document.getElementById("extra").innerHTML=
+"✨ مهما كان سبب الضيق… اتمنى ان يعود الهدوء لقلبك وتعود ابتسامتك الجميلة ✨";
+
+document.getElementById("music").play();
+
+}
+
+</script>
 
 </body>
 </html>
